@@ -1,0 +1,6 @@
+- Tài khoản đăng nhập Admin:
+    + Tên đăng nhập: admin
+    + Mật khẩu: admin
+- Hoặc tài khoản user: 
+    + Tên đăng nhập: user@gmail.com
+    + Mật khẩu : user
