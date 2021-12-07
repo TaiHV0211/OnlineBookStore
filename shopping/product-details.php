@@ -176,7 +176,10 @@ if (isset($_POST['submit'])) {
 														<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 															<i class="fa fa-shopping-cart"></i>
 														</button>
-														<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
+														<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>"
+														 class=" add-cart lnk btn btn-primary"
+														 style="display: inline-block;padding: 6px;"
+														 >Add to cart</a>
 
 
 													</div>
@@ -655,8 +658,6 @@ if (isset($_POST['submit'])) {
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 
-	<!-- For demo purposes – can be removed on production -->
-
 	<script src="switchstylesheet/switchstylesheet.js"></script>
 
 	<script>
@@ -674,10 +675,6 @@ if (isset($_POST['submit'])) {
 			$('.show-theme-options').delay(2000).trigger('click');
 		});
 	</script>
-	<!-- For demo purposes – can be removed on production : End -->
-
-
-
 </body>
 
 </html>

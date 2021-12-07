@@ -244,7 +244,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 															<span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']); ?></span>
 														</div>
 													</div>
-													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+													<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="add-cart lnk btn btn-primary">Add to Cart</a></div>
 												</div>
 
 											</div>

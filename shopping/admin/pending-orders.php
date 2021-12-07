@@ -101,7 +101,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											} ?>
 										</tbody>
 									</table>
-								</div>
+									</div>
 							</div>
 
 
