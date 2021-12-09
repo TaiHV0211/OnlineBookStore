@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2021 at 04:58 AM
+-- Generation Time: Dec 09, 2021 at 10:36 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.2.34
 
@@ -91,19 +91,28 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `userId`, `productId`, `quantity`, `orderDate`, `paymentMethod`, `orderStatus`) VALUES
-(7, 1, '1', 1, '2021-12-03 04:25:19', NULL, NULL),
-(8, 1, '1', 1, '2021-12-03 04:25:43', NULL, NULL),
-(9, 1, '1', 3, '2021-12-03 04:28:25', NULL, NULL),
-(10, 1, '2', 1, '2021-12-03 04:28:25', NULL, NULL),
-(11, 1, '1', 3, '2021-12-03 04:28:48', NULL, NULL),
-(12, 1, '2', 2, '2021-12-03 04:28:48', NULL, NULL),
-(13, 4, '1', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
-(14, 4, '2', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
-(15, 4, '8', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
-(16, 4, '1', 1, '2021-12-03 04:32:42', NULL, NULL),
-(17, 4, '2', 1, '2021-12-03 04:32:42', NULL, NULL),
-(18, 4, '8', 1, '2021-12-03 04:32:42', NULL, 'Delivered'),
-(19, 4, '2', 1, '2021-12-05 13:11:34', NULL, NULL);
+(1, 1, '1', 1, '2021-12-03 04:25:19', NULL, NULL),
+(2, 1, '1', 1, '2021-12-03 04:25:43', NULL, NULL),
+(3, 1, '1', 3, '2021-12-03 04:28:25', NULL, NULL),
+(4, 1, '2', 1, '2021-12-03 04:28:25', NULL, NULL),
+(5, 1, '1', 3, '2021-12-03 04:28:48', NULL, NULL),
+(6, 1, '2', 2, '2021-12-03 04:28:48', NULL, NULL),
+(7, 4, '1', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
+(8, 4, '2', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
+(9, 4, '8', 1, '2021-12-03 04:31:29', NULL, 'Delivered'),
+(10, 4, '1', 1, '2021-12-03 04:32:42', NULL, 'Delivered'),
+(11, 4, '2', 1, '2021-12-03 04:32:42', NULL, NULL),
+(12, 4, '8', 1, '2021-12-03 04:32:42', NULL, 'Delivered'),
+(13, 4, '2', 1, '2021-12-05 13:11:34', NULL, NULL),
+(14, 5, '3', 1, '2021-12-07 05:35:06', 'Internet Banking', NULL),
+(15, 5, '61', 1, '2021-12-07 05:35:06', 'Internet Banking', NULL),
+(16, 5, '92', 1, '2021-12-07 05:35:06', 'Internet Banking', NULL),
+(17, 5, '1', 1, '2021-12-09 05:15:31', 'Internet Banking', NULL),
+(18, 5, '2', 6, '2021-12-09 05:15:31', 'Internet Banking', 'Delivered'),
+(19, 5, '32', 7, '2021-12-09 05:15:31', 'Internet Banking', NULL),
+(20, 5, '62', 9, '2021-12-09 05:15:31', 'Internet Banking', NULL),
+(24, 1, '3', 1, '2021-12-09 05:41:47', NULL, NULL),
+(25, 5, '2', 1, '2021-12-09 05:42:04', 'COD', NULL);
 
 -- --------------------------------------------------------
 
@@ -129,7 +138,10 @@ INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDa
 (7, 18, 'Delivered', 'oke', '2021-12-05 12:30:37'),
 (8, 14, 'Delivered', 'ok1', '2021-12-05 12:57:46'),
 (9, 15, 'in Process', 'success', '2021-12-06 15:15:14'),
-(10, 15, 'Delivered', 'success full', '2021-12-06 15:15:27');
+(10, 15, 'Delivered', 'success full', '2021-12-06 15:15:27'),
+(11, 16, 'Delivered', 'Success', '2021-12-07 05:36:30'),
+(12, 24, 'Delivered', 'oke', '2021-12-09 05:17:19'),
+(13, 23, 'in Process', '.', '2021-12-09 05:31:02');
 
 -- --------------------------------------------------------
 
@@ -155,7 +167,8 @@ CREATE TABLE `productreviews` (
 
 INSERT INTO `productreviews` (`id`, `productId`, `quality`, `price`, `value`, `name`, `summary`, `review`, `reviewDate`) VALUES
 (5, 30, 1, 5, 2, 'LƯƠNG THỊ THƠM', 'Hơi Hay', 'Hay', '2021-12-05 04:00:43'),
-(6, 30, 1, 2, 3, 'Hồ Văn Tài', 'Hơi Hay', 'Hay', '2021-12-05 04:00:59');
+(6, 30, 1, 2, 3, 'Hồ Văn Tài', 'Hơi Hay', 'Hay', '2021-12-05 04:00:59'),
+(7, 2, 4, 3, 4, 'Văn Tài', 'Sách Hay', 'Trong sách này có ..', '2021-12-07 05:52:18');
 
 -- --------------------------------------------------------
 
@@ -288,7 +301,8 @@ INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `product
 (101, 13, 37, 'Hành trình của kinh hồn', 'Thái Hà', 83500, 129000, '<span style=\"font-size: 10.5pt; line-height: 107%; font-family: Roboto; color: rgb(36, 36, 36); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;\">Bạn có sợ chết không? Bạn có tự hỏi điều gì sẽ xảy\r\nra sau khi bạn chết không? Có thể nào bạn có một linh hồn đến từ đâu đó và sẽ\r\ntrở về đó sau khi thân xác bạn chết đi, hay đó chỉ là một điều ước ao vì bạn\r\nquá sợ hãi?</span><br>', '1.jpg', '2.jpg', '3.jpg', 10000, 'In Stock', '2021-12-06 12:04:35', NULL),
 (102, 13, 37, 'Cuốn sách về các biểu tượng tâm linh', 'VanLangBooks', 122000, 122000, '<span style=\"font-size: 10.5pt; line-height: 107%; font-family: Roboto; color: rgb(36, 36, 36); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;\">Cuốn sách về các biểu tượng tâm linh kể những\r\ncâu chuyện hấp dẫn và đưa ra cách lý giải về cảm giác mơ hồ nhưng gây sốc, những\r\nsự trùng hợp ngẫu nhiên đáng nhớ, một số giấc mơ kỳ lạ, mà chúng ta thường gặp.\r\nNhững điều tưởng chừng bình thường ấy thực chất lại là thông điệp quan trọng đến\r\ntừ thế giới siêu nhiên, hoặc từ bản thể vũ trụ. Hãy cởi mở trước những lời chỉ\r\ndẫn như thế bằng cách nhận ra và giải mã các dấu hiệu cũng như những hiện tượng\r\ntương ứng. Hãy mở rộng nhận thức về các biểu tượng trong cuộc sống, cải thiện\r\ntrực giác, mạnh dạn bày tỏ ước muốn của bạn. Cuốn cẩm nang phong phú này bao gồm\r\nnhững bài tập thiết thực để giúp bạn phát triển năng lực trực giác và đón nhận\r\ncác trải nghiệm tâm linh trong đời sống thực.</span><br>', '1.jpg', '2.jpg', '3.jpg', 10000, 'In Stock', '2021-12-06 12:05:17', NULL),
 (103, 13, 37, 'Cuốn sách về các biểu tượng tâm linh', 'VanLangBooks', 122000, 122000, '<span style=\"font-size: 10.5pt; line-height: 107%; font-family: Roboto; color: rgb(36, 36, 36); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;\">Cuốn sách về các biểu tượng tâm linh kể những\r\ncâu chuyện hấp dẫn và đưa ra cách lý giải về cảm giác mơ hồ nhưng gây sốc, những\r\nsự trùng hợp ngẫu nhiên đáng nhớ, một số giấc mơ kỳ lạ, mà chúng ta thường gặp.\r\nNhững điều tưởng chừng bình thường ấy thực chất lại là thông điệp quan trọng đến\r\ntừ thế giới siêu nhiên, hoặc từ bản thể vũ trụ. Hãy cởi mở trước những lời chỉ\r\ndẫn như thế bằng cách nhận ra và giải mã các dấu hiệu cũng như những hiện tượng\r\ntương ứng. Hãy mở rộng nhận thức về các biểu tượng trong cuộc sống, cải thiện\r\ntrực giác, mạnh dạn bày tỏ ước muốn của bạn. Cuốn cẩm nang phong phú này bao gồm\r\nnhững bài tập thiết thực để giúp bạn phát triển năng lực trực giác và đón nhận\r\ncác trải nghiệm tâm linh trong đời sống thực.</span><br>', '1.jpg', '2.jpg', '3.jpg', 10000, 'In Stock', '2021-12-06 15:07:12', NULL),
-(104, 8, 25, 'The Black Ghost', 'NXB Kim Đồng', 1, 1, '1', '1.jpg', '2.jpg', '3.jpg', 10000, 'In Stock', '2021-12-07 03:37:58', NULL);
+(104, 8, 25, 'The Black Ghost', 'NXB Kim Đồng', 1, 1, '1', '1.jpg', '2.jpg', '3.jpg', 10000, 'In Stock', '2021-12-07 03:37:58', NULL),
+(105, 15, 45, 'Sách Vật Lý Lớp 10', 'Nhà xuất bản giáo dục VIệt Nam', 35000, 54000, 'Sách Vật Lý Lớp 10', 'vatly10.jpg', 'vatly10_1.jpg', 'vatly10_2.jpg', 6000, 'In Stock', '2021-12-07 05:40:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -338,7 +352,8 @@ INSERT INTO `subcategory` (`id`, `categoryid`, `subcategory`, `creationDate`, `u
 (41, 14, 'Giáo Trình Mác - Lê Nin', '2021-12-05 14:10:49', NULL),
 (42, 14, 'Giáo Trình Lập Trình', '2021-12-05 14:11:03', NULL),
 (43, 11, 'Sách Chính Trị', '2021-12-05 14:11:50', NULL),
-(44, 11, 'Sách Pháp Luật', '2021-12-05 14:11:57', NULL);
+(44, 11, 'Sách Pháp Luật', '2021-12-05 14:11:57', NULL),
+(45, 15, 'Physical', '2021-12-07 05:37:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -366,7 +381,13 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 (27, 'user1@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-05 11:48:26', NULL, 0),
 (28, 'user@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-05 11:48:32', '05-12-2021 05:18:42 PM', 1),
 (29, 'user@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-05 11:50:00', '05-12-2021 06:35:43 PM', 1),
-(30, 'user@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-05 13:08:34', NULL, 1);
+(30, 'user@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-05 13:08:34', NULL, 1),
+(31, 'user@user.com', 0x3a3a3100000000000000000000000000, '2021-12-07 05:34:10', '07-12-2021 12:05:47 PM', 1),
+(32, 'admin@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-07 06:35:57', NULL, 0),
+(33, 'user1@gmail.com', 0x3a3a3100000000000000000000000000, '2021-12-09 05:14:30', NULL, 0),
+(34, 'user@user.com', 0x3a3a3100000000000000000000000000, '2021-12-09 05:14:35', '09-12-2021 10:58:20 AM', 1),
+(35, 'user@user.com', 0x3a3a3100000000000000000000000000, '2021-12-09 05:28:27', '09-12-2021 11:11:49 AM', 1),
+(36, 'user@user.com', 0x3a3a3100000000000000000000000000, '2021-12-09 05:41:55', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -397,7 +418,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `shippingAddress`, `shippingState`, `shippingCity`, `shippingPincode`, `billingAddress`, `billingState`, `billingCity`, `billingPincode`, `regDate`, `updationDate`) VALUES
-(4, 'user', 'user@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', 'Lạc Long Quân, ', 'phường 5', 'Hồ Chí Minh', 333, 'Lạc Long Quân,', ' phường 5', 'Hồ Chí Minh', 444, '2021-12-03 04:31:10', NULL);
+(4, 'user', 'user@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', 'Lạc Long Quân, ', 'phường 5', 'Hồ Chí Minh', 333, 'Lạc Long Quân,', ' phường 5', 'Hồ Chí Minh', 444, '2021-12-03 04:31:10', NULL),
+(5, 'User123', 'user@user.com', 333333333, '24c9e15e52afc47c225b757e7bee1f9d', ', phường 5', 'Lạc Long Quân', 'Hồ Chí Minh', 333, 'phường 5', 'Lạc Long Quân, ', 'Hồ Chí Minh', 444, '2021-12-07 05:33:59', NULL),
+(6, 'hovantai', 'hovantai@gmail.com', 333333333, '24c9e15e52afc47c225b757e7bee1f9d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-09 05:10:32', NULL),
+(7, 'nguyenhoangcat', 'nguyenhoangcat@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-09 05:11:23', NULL),
+(8, 'nguyenhoanglanvy', 'nguyenhoanglanvy@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-09 05:11:54', NULL),
+(9, 'phamnhuy', 'phamnhuy@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-09 05:12:25', NULL),
+(10, 'minhphuong', 'minhphuong@gmail.com', 0, 'ee11cbb19052e40b07aac0ca060c23ee', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-09 05:12:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -417,7 +444,8 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `userId`, `productId`, `postingDate`) VALUES
-(2, 4, 2, '2021-12-05 13:08:41');
+(2, 4, 2, '2021-12-05 13:08:41'),
+(3, 5, 1, '2021-12-07 05:34:48');
 
 --
 -- Indexes for dumped tables
@@ -497,55 +525,55 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `ordertrackhistory`
 --
 ALTER TABLE `ordertrackhistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `productreviews`
 --
 ALTER TABLE `productreviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `subcategory`
 --
 ALTER TABLE `subcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
