@@ -13,8 +13,8 @@
 # Developer: Hồ Văn Tài
 
 Hướng dẫn sử dụng:
-***Yêu cầu máy bạn phải có git csm(Nếu không có truy cập link: https://git-scm.com/)để tải về máy và đăng nhập theo cách (https://vietnix.vn/git-la-gi/)
-***Thứ 2 bạn phải có xampp
+**Yêu cầu máy bạn phải có git csm(Nếu không có truy cập link: https://git-scm.com/)để tải về máy và đăng nhập theo cách (https://vietnix.vn/git-la-gi/)
+**Thứ 2 bạn phải có xampp
 	+B1: Chọn folder để lưu trữ dự án (Nên chọn thư mục xampp/htdocs): trên thanh đường dẫn gõ cmd.
 	+B2: Sau khi màn hình hiện ra thì gõ git clone https://github.com/VanTai0211/2121COMP103102_CongNgheWeb_ProWeb.git
 	+B3: Chờ sau khi tải xong truy cập trang localhost/phpmyadmin
