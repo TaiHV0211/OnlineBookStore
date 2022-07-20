@@ -10,8 +10,6 @@
     + Tên đăng nhập: user@gmail.com
     + Mật khẩu : user
 - Dự án đang được phát triển có thể đưa vô sử dụng với quy mô nhỏ
-# Developer: Hồ Văn Tài
-
 Hướng dẫn sử dụng:
 **Yêu cầu máy bạn phải có git csm(Nếu không có truy cập link: https://git-scm.com/)để tải về máy và đăng nhập theo cách (https://vietnix.vn/git-la-gi/)
 **Thứ 2 bạn phải có xampp
@@ -20,5 +18,8 @@ Hướng dẫn sử dụng:
 	+B3: Chờ sau khi tải xong truy cập trang localhost/phpmyadmin
 	+B4: Tạo Database với tên là shopping sau đó click vào import->choose file->vào thư mục shopping/SQL file vừa clone về và chọn vào shopping(7).sql->Go
 	+B5: Sau khi tạo xong thì chạy đường dẫn localhost/shopping để truy cập vào trang chủ của trang web/ Hoặc có thể truy cập vào localhost/shopping/admin để vào trang quản lý.
+# Developer: Hồ Văn Tài
+
+
 	
 
